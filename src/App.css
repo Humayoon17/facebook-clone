@@ -1,0 +1,241 @@
+/* ***********************-> Navbar START <-************************* */
+
+.navbar {
+    background: yellow;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    position: sticky;
+    z-index: 100000;
+}
+
+.navbar .navbar_logo {
+    height: 50px;
+    width: fit-content;
+    color: white;
+}
+
+.navbar .navbar_logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .navbar_menu {
+    display: flex;
+}
+
+.navbar .navbar_menu h3 {
+    margin-left: 30px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.navbar .navbar_menu h3:hover {
+    font-size: 20px;
+    opacity: 1;
+}
+
+
+/* ***********************-> Navbar END <-************************* */
+
+
+/* ***********************-> Hero START <-************************* */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    background-image: url('https://www.paolasacco.com/fileadmin/media/welt_der_musik/mailand/Hotel-Principe-di-Savoia-Il-Salotto-Lobby-Lounge-Mailand-paola-sacco-luxury-travel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room_hero {
+    min-height: 60vh;
+    background-image: url('https://www.paolasacco.com/fileadmin/media/welt_der_musik/mailand/Hotel-Principe-di-Savoia-Milan-Deluxe-Zimmer-Mailand-paola-sacco-luxury-travel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ***********************-> Hero END <-************************* */
+
+
+/* ***********************-> Banner START <-************************* */
+
+.banner {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.banner>h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    margin: 20px 10px;
+    margin-bottom: 10px;
+}
+
+.banner>div.title_line {
+    width: 100px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.banner>p {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.banner .btn_primary {
+    cursor: pointer;
+    outline: none;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.banner .btn_primary:hover {
+    background: yellow;
+    border: 2px solid black;
+    color: black;
+}
+
+
+/* ***********************-> Banner END <-************************* */
+
+
+/* ***********************-> Services START <-************************* */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(209, 206, 206);
+}
+
+.services>h3,
+.features>h3 {
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.services>div.services_underline,
+.features>div.features_underline {
+    margin: 20px;
+    width: 70px;
+    height: 4px;
+    background: gray;
+    border-radius: 20px;
+}
+
+.services .services_items_sections {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.services_items_sections .services_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.services_items_sections .services_item>.service_icon {
+    font-size: 30px;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.services_items_sections .services_item>h3 {
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.services_items_sections .services_item>p {
+    margin: 20px;
+    margin-top: 10px;
+}
+
+
+/* ***********************-> Services END <-************************* */
+
+
+/* ***********************-> Features START <-************************* */
+
+
+/* ***********************-> Features END <-************************* */
+
+
+/* ***********************-> Responsive START <-************************* */
+
+
+/* 576xp max width and down */
+
+@media (max-width: 576px) {
+    .navbar .navbar_menu {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar .navbar_menu h3 {
+        padding-top: 5px;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+    .services .services_items_sections {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+
+/*  Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+
+/*  X-Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
+
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+
+@media (min-width: 1400px) {}
+
+
+/* ***********************-> Responsive END <-************************* */
