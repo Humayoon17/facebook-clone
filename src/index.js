@@ -4,13 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { RoomProvider } from './context';
+
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <RoomProvider>
+      <Router>
+        <App />
+      </Router>
+    </RoomProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -5,7 +5,7 @@ import room4 from '../images/details-4.jpeg';
 import img1 from '../images/room-1.jpeg';
 import img2 from '../images/room-2.jpeg';
 import img3 from '../images/room-3.jpeg';
-import img4 from './images/room-4.jpeg';
+import img4 from '../images/room-4.jpeg';
 import img5 from '../images/room-5.jpeg';
 import img6 from '../images/room-6.jpeg';
 import img7 from '../images/room-7.jpeg';
@@ -15,7 +15,7 @@ import img10 from '../images/room-10.jpeg';
 import img11 from '../images/room-11.jpeg';
 import img12 from '../images/room-12.jpeg';
 
-export default [
+const data = [
   {
     sys: {
       id: '1',
@@ -24,7 +24,7 @@ export default [
       name: 'single economy',
       slug: 'single-economy',
       type: 'single',
-      price: 100,
+      price: 1800,
       size: 200,
       capacity: 1,
       pets: false,
@@ -81,7 +81,7 @@ export default [
       name: 'single basic',
       slug: 'single-basic',
       type: 'single',
-      price: 150,
+      price: 1500,
       size: 250,
       capacity: 1,
       pets: false,
@@ -138,7 +138,7 @@ export default [
       name: 'single standard',
       slug: 'single-standard',
       type: 'single',
-      price: 250,
+      price: 2500,
       size: 300,
       capacity: 1,
       pets: true,
@@ -195,7 +195,7 @@ export default [
       name: 'single deluxe',
       slug: 'single-deluxe',
       type: 'single',
-      price: 300,
+      price: 3000,
       size: 400,
       capacity: 1,
       pets: true,
@@ -252,7 +252,7 @@ export default [
       name: 'double economy',
       slug: 'double-economy',
       type: 'double',
-      price: 200,
+      price: 2000,
       size: 300,
       capacity: 2,
       pets: false,
@@ -309,7 +309,7 @@ export default [
       name: 'double basic',
       slug: 'double-basic',
       type: 'double',
-      price: 250,
+      price: 2500,
       size: 350,
       capacity: 2,
       pets: false,
@@ -366,7 +366,7 @@ export default [
       name: 'double standard',
       slug: 'double-standard',
       type: 'double',
-      price: 300,
+      price: 3000,
       size: 400,
       capacity: 2,
       pets: true,
@@ -423,7 +423,7 @@ export default [
       name: 'double deluxe',
       slug: 'double-deluxe',
       type: 'double',
-      price: 400,
+      price: 4000,
       size: 500,
       capacity: 2,
       pets: true,
@@ -480,7 +480,7 @@ export default [
       name: 'family economy',
       slug: 'family-economy',
       type: 'family',
-      price: 300,
+      price: 3000,
       size: 500,
       capacity: 3,
       pets: false,
@@ -537,7 +537,7 @@ export default [
       name: 'family basic',
       slug: 'family-basic',
       type: 'family',
-      price: 350,
+      price: 3500,
       size: 550,
       capacity: 4,
       pets: false,
@@ -594,7 +594,7 @@ export default [
       name: 'family standard',
       slug: 'family-standard',
       type: 'family',
-      price: 400,
+      price: 4300,
       size: 600,
       capacity: 5,
       pets: true,
@@ -651,7 +651,7 @@ export default [
       name: 'family deluxe',
       slug: 'family-deluxe',
       type: 'family',
-      price: 500,
+      price: 5500,
       size: 700,
       capacity: 6,
       pets: true,
@@ -708,7 +708,7 @@ export default [
       name: 'presidential',
       slug: 'presidential-room',
       type: 'presidential',
-      price: 600,
+      price: 6000,
       size: 1000,
       capacity: 10,
       pets: true,
@@ -758,3 +758,5 @@ export default [
     },
   },
 ];
+
+export default data;

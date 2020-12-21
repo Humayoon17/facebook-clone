@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/rooms/:roomId'>
           <SingleRoom />
         </Route>
-        <Route path='*'>
+        <Route exact path='*'>
           <Error />
         </Route>
       </Switch>

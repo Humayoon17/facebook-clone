@@ -106,7 +106,7 @@
     margin-bottom: 20px;
 }
 
-.banner .btn_primary {
+.btn_primary {
     cursor: pointer;
     outline: none;
     border: 2px solid yellow;
@@ -119,7 +119,7 @@
     transition: 0.3s ease-in-out;
 }
 
-.banner .btn_primary:hover {
+.btn_primary:hover {
     background: yellow;
     border: 2px solid black;
     color: black;
@@ -149,7 +149,7 @@
 .services>div.services_underline,
 .features>div.features_underline {
     margin: 20px;
-    width: 70px;
+    width: 100px;
     height: 4px;
     background: gray;
     border-radius: 20px;
@@ -191,8 +191,184 @@
 
 /* ***********************-> Features START <-************************* */
 
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading>h3 {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+.loading>img {
+    height: 100px;
+    object-fit: contain;
+}
+
+.features .featured_rooms {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.room {
+    padding: 20px;
+}
+
+.image_container {
+    position: relative;
+    width: 320px;
+    cursor: pointer;
+}
+
+.room .image_room {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    object-fit: contain;
+}
+
+.room .room_price {
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.83);
+    color: white;
+    border-bottom-right-radius: 20px;
+}
+
+.room_price>h6 {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.room_price>p {
+    font-size: small;
+    text-transform: capitalize;
+}
+
+.room .room_details {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image_container:hover .image_room {
+    opacity: 0.5;
+}
+
+.image_container:hover .room_details {
+    opacity: 1;
+}
+
+.image_container:hover .room_details button.btn_primary {
+    transition: .1s ease;
+    color: black;
+    background: yellow;
+}
+
+.image_container .room_info {
+    text-align: center;
+    padding: 10px;
+    background: rgb(140, 85, 240);
+    color: white;
+    font-size: large;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
 
 /* ***********************-> Features END <-************************* */
+
+
+/* ***********************-> Single Room Start <-************************* */
+
+.single_room_section .single_room_images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.single_room_section .single_room_images>img {
+    height: 150px;
+    object-fit: contain;
+    margin: 20px;
+}
+
+.single_room_info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.single_room_info .room_description {
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.single_room_info h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.single_room_info .room_info {
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.single_room_info .room_info>h6 {
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.room_extras_section {
+    padding: 20px 40px;
+}
+
+.room_extras_section>h6 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.room_extras_section .extras {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.room_extras_section li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+/* ***********************-> Single Room END <-************************* */
 
 
 /* ***********************-> Responsive START <-************************* */
@@ -215,17 +391,37 @@
     .services .services_items_sections {
         flex-wrap: wrap;
     }
+    .single_room_info {
+        display: flex;
+        flex-direction: column;
+    }
+    .single_room_info>.room_info,
+    .room_description {
+        width: 100% !important;
+    }
+    .room_extras_section .extras {
+        display: block !important;
+        /* grid-template-columns: 1fr !important; */
+    }
 }
 
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {}
+@media (max-width: 768px) {
+    .room_extras_section .extras {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
 
 
 /*  Large devices (desktops, 992px and up) */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .room_extras_section .extras {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 
 /*  X-Large devices (large desktops, 1200px and up) */
