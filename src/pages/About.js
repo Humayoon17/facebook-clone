@@ -18,7 +18,11 @@ export default function About() {
         <h2>Humayoon Muhammadi</h2>
       </div>
       <div class='btn'>
-        <a href='https://github.com/Humayoon17' target='_blank'>
+        <a
+          href='https://github.com/Humayoon17'
+          target='_blank'
+          rel='noreferrer'
+        >
           Github Account
         </a>
       </div>
