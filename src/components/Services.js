@@ -2,12 +2,12 @@ import React from 'react';
 
 import services from '../data/services';
 import ServicesItem from './ServicesItem';
+import Title from './Title';
 
 export default function Services() {
   return (
     <section className='services'>
-      <h3>Services</h3>
-      <div className='services_underline'></div>
+      <Title title='Services' />
       <div className='services_items_sections'>
         {services.map((service) => {
           return (

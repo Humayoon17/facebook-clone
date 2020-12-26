@@ -1,15 +1,12 @@
 import React from 'react';
+import AppLogo from '../images/logo.svg';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
     <nav className='navbar'>
       <Link to='/'>
-        <img
-          className='navbar_logo'
-          src='https://static1.squarespace.com/static/5c9223e6da50d33331814e00/t/5dae97091d2c3845d440f11a/1571723036905/Property+sales+and+rentals.svg'
-          alt='Hotel-Rooms'
-        />
+        <img className='navbar_logo' src={AppLogo} alt='Hotel-Rooms' />
       </Link>
 
       <div className='navbar_menu'>

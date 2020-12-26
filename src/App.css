@@ -5,6 +5,7 @@
     padding: 10px;
     display: flex;
     align-items: center;
+    height: 60px;
     top: 0;
     position: sticky;
     z-index: 100000;
@@ -129,6 +130,27 @@
 /* ***********************-> Banner END <-************************* */
 
 
+/* ***********************-> Title START <-************************* */
+
+h3.title_component {
+    margin-top: 30px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+div.title_underline {
+    margin: 20px;
+    width: 100px;
+    height: 4px;
+    background: gray;
+    border-radius: 20px;
+}
+
+
+/* ***********************-> Title END <-************************* */
+
+
 /* ***********************-> Services START <-************************* */
 
 .services {
@@ -136,23 +158,6 @@
     flex-direction: column;
     align-items: center;
     background: rgb(209, 206, 206);
-}
-
-.services>h3,
-.features>h3 {
-    margin-top: 30px;
-    font-size: 25px;
-    letter-spacing: 2px;
-    font-weight: bolder;
-}
-
-.services>div.services_underline,
-.features>div.features_underline {
-    margin: 20px;
-    width: 100px;
-    height: 4px;
-    background: gray;
-    border-radius: 20px;
 }
 
 .services .services_items_sections {
@@ -371,6 +376,276 @@
 /* ***********************-> Single Room END <-************************* */
 
 
+/* ***********************-> Search Rooms START <-************************* */
+
+.rooms_filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+.filter_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.filter_type {
+    margin-right: 3rem;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+    background-color: yellow;
+    padding: .3rem;
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin: 1rem 0 1rem 0;
+}
+
+.filter_range {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.filter_range input#price {
+    padding: 0.3rem 0 0.3rem 0;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+}
+
+.filter_range>label {
+    padding: 0.3rem;
+}
+
+.size-inputs input {
+    padding: .3rem;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    margin-top: 15px;
+    background-color: rgb(218, 213, 221);
+    width: 100%;
+}
+
+.checkbox-inputs-1 {
+    margin-top: 15px;
+}
+
+.extra-text {
+    visibility: hidden;
+}
+
+.checkbox-inputs-2 {
+    margin-top: 5px;
+}
+
+.lbl-breakfast {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.lbl-breakfast input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-checkbox {
+    position: absolute;
+    cursor: pointer;
+    width: 55px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 60px;
+}
+
+.slider-checkbox:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: rgb(129, 127, 163);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.lbl-breakfast input:checked+.slider-checkbox {
+    background-color: yellow;
+}
+
+.lbl-breakfast input:focus+.slider-checkbox {
+    box-shadow: 0 0 1px #8fa5b8;
+}
+
+.lbl-breakfast input:checked+.slider-checkbox::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: rgb(21, 18, 18);
+}
+
+
+/* Pets Checkbox */
+
+.lbl-pets {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.lbl-pets input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.lbl-pets input:checked+.slider-checkbox {
+    background-color: yellow;
+}
+
+.lbl-pets input:focus+.slider-checkbox {
+    box-shadow: 0 0 1px #8fa5b8;
+}
+
+.lbl-pets input:checked+.slider-checkbox::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: rgb(21, 18, 18);
+}
+
+
+/* ***********************-> Search Rooms END <-************************* */
+
+
+/* ***********************-> Rooms List START <-************************* */
+
+.rooms_empty {
+    margin: 3rem;
+}
+
+section.rooms_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* ***********************-> Rooms List END <-************************* */
+
+
+/* ***********************-> About Page START <-************************* */
+
+.about .btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.about .text img {
+    width: 400px;
+}
+
+div.about h1 {
+    font-size: 33px;
+}
+
+.about .prog-info {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .prog-info h2 {
+    font-weight: 800;
+    color: #383A41;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 2rem;
+}
+
+.prof-round {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+.about .prog-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ***********************-> About Page END <-************************* */
+
+
+/* ***********************-> Contact Us Page START <-************************* */
+
+.contact-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-logo img {
+    max-width: 500px;
+}
+
+.contact-us h1 {
+    margin: 2rem;
+}
+
+.contact-us .btn {
+    max-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    overflow-wrap: anywhere;
+}
+
+.contact-us .btn i {
+    margin-right: 1rem;
+    font-size: 20px;
+}
+
+.contact-us .btn>span.email {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    text-overflow: ellipsis;
+}
+
+
+/* ***********************-> Contact Us Page END <-************************* */
+
+
 /* ***********************-> Responsive START <-************************* */
 
 
@@ -380,13 +655,18 @@
     .navbar .navbar_menu {
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
     }
     .navbar .navbar_menu h3 {
         padding-top: 5px;
+        font-size: 17px;
     }
     .navbar {
         justify-content: space-between;
+        height: 75px;
+    }
+    .navbar .navbar_logo {
+        width: auto;
     }
     .services .services_items_sections {
         flex-wrap: wrap;
@@ -403,6 +683,13 @@
         display: block !important;
         /* grid-template-columns: 1fr !important; */
     }
+    .filter_form {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+    .size-inputs input {
+        width: 100%;
+    }
 }
 
 
@@ -411,6 +698,16 @@
 @media (max-width: 768px) {
     .room_extras_section .extras {
         grid-template-columns: 1fr 1fr !important;
+    }
+    .filter_form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .size-inputs input {
+        width: 100%;
+    }
+    .extra-text {
+        display: none !important;
     }
 }
 

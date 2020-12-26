@@ -1,11 +1,11 @@
 import React from 'react';
 import FeaturedRooms from '../components/FeaturedRooms';
+import Title from './Title';
 
 export default function Features() {
   return (
     <section className='features'>
-      <h3>Featured Rooms</h3>
-      <div className='features_underline'></div>
+      <Title title='Featured Rooms' />
       <FeaturedRooms />
     </section>
   );

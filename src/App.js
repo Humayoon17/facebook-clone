@@ -6,6 +6,8 @@ import Error from './pages/Error';
 import Navbar from './components/Navbar';
 
 import { Switch, Route } from 'react-router-dom';
+import About from './pages/About';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -20,6 +22,13 @@ function App() {
         </Route>
         <Route exact path='/rooms/:roomId'>
           <SingleRoom />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+
+        <Route exact path='/contact-us'>
+          <ContactUs />
         </Route>
         <Route exact path='*'>
           <Error />
