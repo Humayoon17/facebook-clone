@@ -339,6 +339,7 @@ div.active {
 
 .story>.avatar {
     width: 2.5rem;
+    height: 2.5rem;
     margin: 10px;
     border: 4px solid #2e81f4;
 }
@@ -464,6 +465,8 @@ div.active {
 }
 
 .post-top>.avatar {
+    width: 50px !important;
+    height: 50px;
     margin-right: 10px;
     width: 2.5rem;
 }

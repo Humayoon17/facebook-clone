@@ -1,6 +1,27 @@
 import React from 'react';
 
+import { auth, provider } from '../firebase';
+import userActions from '../actions/userActions';
+import { useStateValue } from '../providers/StateProvider';
+
 export default function Login() {
+  const [state, dispatch] = useStateValue();
+
+  const signInWithGoogle = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        dispatch({
+          type: userActions.SET_USER,
+          user: result.user,
+        });
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  };
+
   return (
     <div className='login'>
       <div className='left-section'>
@@ -18,9 +39,13 @@ export default function Login() {
           <form>
             <input type='text' placeholder='Email' />
             <input type='password' placeholder='Password' />
-            <button className='btn-login'>Log In</button>
+            <button type='submit' className='btn-login'>
+              Log In
+            </button>
 
-            <button className='google-login'>Login with Google</button>
+            <button className='google-login' onClick={signInWithGoogle}>
+              Login with Google
+            </button>
             <p>Forgot Password?</p>
           </form>
           <div className='line'></div>

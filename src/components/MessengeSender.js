@@ -2,25 +2,39 @@ import React, { useState } from 'react';
 import { FaImages } from 'react-icons/fa';
 import { FcVideoCall } from 'react-icons/fc';
 import { RiEmotionLine } from 'react-icons/ri';
-import userProfilePic from '../assets/images/facebook.svg';
+import db from '../firebase';
+import firebase from 'firebase';
 
 import Avatar from './Avatar';
 
-const MessengeSender = () => {
+const MessengeSender = ({ user }) => {
   const [input, setInput] = useState('');
   const [imageUrlInput, setImageUrlInput] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // do adding post code
-    setInput('');
-    setImageUrlInput('');
+
+    db.collection('posts')
+      .add({
+        text: input,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        profilePic: user.photoURL,
+        image: imageUrlInput,
+        username: user.displayName,
+      })
+      .then((_) => {
+        setInput('');
+        setImageUrlInput('');
+      })
+      .catch((error) => {
+        console.log('adding post error', error);
+      });
   };
 
   return (
     <div className='message-sender'>
       <div className='message-sender-top'>
-        <Avatar src={userProfilePic} />
+        <Avatar src={user.photoURL} />
         <form>
           <input
             type='text'
@@ -29,7 +43,9 @@ const MessengeSender = () => {
               setInput(e.target.value);
             }}
             className='input'
-            placeholder="What's on your mind, Humayoon?"
+            placeholder={`What's on your mind ${
+              user.displayName.split(' ')[0]
+            }?`}
           />
           <input
             type='text'

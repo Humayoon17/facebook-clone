@@ -3,8 +3,7 @@ import { FaRegCommentAlt } from 'react-icons/fa';
 import { BiLike } from 'react-icons/bi';
 import { IoMdShareAlt } from 'react-icons/io';
 import { MdExpandMore } from 'react-icons/md';
-import userProfilePic from '../assets/images/facebook.svg';
-import Program from '../assets/images/programming.png';
+
 import Avatar from './Avatar';
 
 export default function Post({
@@ -15,21 +14,26 @@ export default function Post({
   message,
   timestamp,
 }) {
+  timestamp =
+    timestamp !== null
+      ? new Date(timestamp?.toDate()).toUTCString()
+      : 'loading...';
+
   return (
     <div className='post'>
       <div className='post-top'>
-        <Avatar src={userProfilePic} />
+        <Avatar src={postedUserProfile} />
         <div className='post-info'>
-          <h3>{username}slkdjf</h3>
-          <p>{timestamp}10 ago</p>
+          <h3>{username}</h3>
+          <p>{timestamp}</p>
         </div>
       </div>
       <div className='post-content'>
         <div className='post-text'>
-          <p>{message}lkjdslfksjd</p>
+          <p>{message}</p>
         </div>
         <div className='post-image'>
-          <img src={Program} alt='' />
+          <img src={image} alt='' />
         </div>
       </div>
       <div className='post-bottom'>
@@ -46,7 +50,7 @@ export default function Post({
           <p>Share</p>
         </div>
         <div className='post-option'>
-          <Avatar src={userProfilePic} />
+          <Avatar src={currentUserProfile} />
           <MdExpandMore />
         </div>
       </div>

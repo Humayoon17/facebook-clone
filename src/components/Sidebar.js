@@ -1,6 +1,5 @@
 import React from 'react';
 import SidebarRow from './SidebarRow';
-import Logo from '../assets/images/facebook.svg';
 import { FaUserFriends, FaUsers } from 'react-icons/fa';
 import {
   MdAccessTime,
@@ -10,10 +9,10 @@ import {
   MdOndemandVideo,
 } from 'react-icons/md';
 
-export default function Sidebar() {
+export default function Sidebar({ user }) {
   return (
     <div className='sidebar'>
-      <SidebarRow image={Logo} title={'Username'} />
+      <SidebarRow image={user.photoURL} title={user.displayName} />
       <SidebarRow Icon={MdLocalHospital} title='COVID-19 Information Center' />
       <SidebarRow Icon={FaUserFriends} title='Friends' />
       <SidebarRow Icon={FaUsers} title='Groups' />

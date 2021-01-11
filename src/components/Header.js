@@ -16,7 +16,7 @@ import { IoGameController } from 'react-icons/io5';
 import Avatar from './Avatar';
 import Button from './Button';
 
-const Header = () => {
+const Header = ({ user }) => {
   return (
     <div className='header'>
       <div className='header-left'>
@@ -47,8 +47,8 @@ const Header = () => {
       </div>
       <div className='header-right'>
         <div className='user-info'>
-          <Avatar src={Logo} />
-          <h4>Username</h4>
+          <Avatar src={user.photoURL} />
+          <h4>{user.displayName.split(' ')[0]}</h4>
         </div>
         <Button>
           <MdAdd />
