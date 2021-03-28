@@ -37,19 +37,20 @@ export default function Login() {
       <div className='right-section'>
         <div className='form'>
           <form>
-            <input type='text' placeholder='Email' />
+            {/* <input type='text' placeholder='Email' />
             <input type='password' placeholder='Password' />
             <button type='submit' className='btn-login'>
               Log In
-            </button>
+            </button> */}
+            <h2>Please Login First</h2>
 
             <button className='google-login' onClick={signInWithGoogle}>
               Login with Google
             </button>
-            <p>Forgot Password?</p>
+            {/* <p>Forgot Password?</p> */}
           </form>
-          <div className='line'></div>
-          <button className='btn-sign-up'>Create New Account</button>
+          {/* <div className='line'></div>
+          <button className='btn-sign-up'>Create New Account</button> */}
         </div>
       </div>
     </div>
